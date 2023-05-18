@@ -1,0 +1,11 @@
+{
+  "name": "leetcode-first-50",
+  "version": "1.0.0",
+  "description": "First 50 problems solutions in JS for Leetcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oleg Markoff",
+  "license": "ISC"
+}
