@@ -40,7 +40,7 @@ console.log(letterCombinations('2345'));
 
 // runtime 59ms 
 // memory 41.8 MB
-// O(n)
+// O(n^2 + k) map has O(n), but the second map acessing constant of 3 letters
 
 // multiple for loops solution
 
