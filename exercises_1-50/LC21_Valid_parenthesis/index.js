@@ -48,3 +48,27 @@ console.log(isValid(str));
 
 // runtime 56 ms
 // memory 42.4 mB
+
+// without allocating hashMap
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid2 = function(s) {
+    let stack = [];
+    for(let i = 0; i < s.length; i++) {
+        if(s[i] == '(') {
+            stack.push(')');
+        } else if(s[i] == '{') {
+            stack.push('}')
+        } else if(s[i] == '[') {
+            stack.push(']');
+        } else if (stack.pop() != s[i]) {
+            return false;
+        }
+    }
+    return !stack.length;
+}
+
+// runtime 57ms 
+// memory 42.6 mb
