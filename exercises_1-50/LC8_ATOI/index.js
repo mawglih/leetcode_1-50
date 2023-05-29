@@ -33,7 +33,6 @@ var myAtoi = function(s) {
             } else if(char = ' ') { // check if it is a whitespace, only before number encountered
                 continue;
             }
-            // continue;
         } else {
             if(Number.isSafeInteger(result)) { // check for overflow
                 result = result * 10 + parseInt(char);
