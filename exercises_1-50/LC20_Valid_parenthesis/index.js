@@ -43,8 +43,8 @@ Example 3:
 Input: s = "(]"
 Output: false
  */
-const str = '(]';
-console.log(isValid(str));
+// const str = '(]';
+// console.log(isValid(str));
 
 // runtime 56 ms
 // memory 42.4 mB
@@ -64,11 +64,15 @@ var isValid2 = function(s) {
         } else if(s[i] == '[') {
             stack.push(']');
         } else if (stack.pop() != s[i]) {
+            console.log('pop', stack.pop());
             return false;
         }
+        console.log('stack', stack, i);
     }
     return !stack.length;
 }
 
 // runtime 57ms 
 // memory 42.6 mb
+
+console.log(isValid2('(()[()[]{})'));
