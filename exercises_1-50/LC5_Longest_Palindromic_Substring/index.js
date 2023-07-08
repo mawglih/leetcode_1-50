@@ -1,41 +1,40 @@
-// Given a string s, return the longest palindromic substring in s.
-
 /**
- * @param {string}
+ * Given a string s, return the longest palindromic substring  in s.
+
+Example 1:
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+
+Example 2:
+Input: s = "cbbd"
+Output: "bb"
+ */
+/**
+ * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function(string) {
-    let longestPal = '';
+var longestPalindrome = function(s) {
+    let startIndx = 0;
+    let maxLength = 1;
 
-    var getLongestPalindrome = function (leftPosition, rightPosition) {
-        // While there is space to expand, and the expanded strings match
-        while (leftPosition >= 0 && rightPosition < string.length && string[leftPosition] === string[rightPosition]) {
-            // Expand in each direction.
-            leftPosition--;
-            rightPosition++;
-        }
-
-        // Store the longest palindrom (if it's the longest one found so far)
-        if (rightPosition - leftPosition > longestPal.length) {
-            longestPal = string.slice(leftPosition + 1, rightPosition);
-        }
-    };
-
-    // Loop through the letters
-    for (let i = 0; i < string.length; i++) {
-        // Find the longest odd palindrome
-        getLongestPalindrome(i, i + 1);
-
-        // Find the longest even palindrome
-        getLongestPalindrome(i, i);
-
-        // Check if a longer palindrome cannot be found
-        if ((string.length - i) * 2 < longestPal.length) {
-            // Break out to avoid unnecessary computation
-            break;
+   const expandAroundCenter = (left,right) => {
+        while(left >= 0 && right < s.length && s[left] === s[right]) {
+            const currLength = right - left + 1;
+            if(currLength > maxLength) {
+                maxLength = currLength;
+                startIndx = left;
+            }
+            left--;
+            right++;
         }
     }
-    return longestPal;
+for(let i = 0; i < s.length; i++) {
+    expandAroundCenter(i, i);
+    expandAroundCenter(i, i + 1);
+}
+let res = s.slice(startIndx, startIndx + maxLength);
+return res;
 };
 
 const str = 'abracarba';

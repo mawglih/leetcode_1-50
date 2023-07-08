@@ -1,0 +1,1 @@
+Create helper function to expand substrings around center. SInce it can be odd and even substrings it will be 2 options to call. Return substring that is starting on startindex and ends at maxlength.
