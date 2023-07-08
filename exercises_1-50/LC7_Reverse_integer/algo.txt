@@ -1,0 +1,1 @@
+Use parseInt and array to revert string, save sign of the integer in variable. Check if it is within range allowed. Return reverted integer or 0.
