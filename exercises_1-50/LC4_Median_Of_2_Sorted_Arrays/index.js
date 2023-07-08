@@ -62,3 +62,24 @@ var findMedianSortedArrays2 = function(nums1, nums2) {
 // Memory 47.1 MB  - worse than simple one
 
 console.log("2", findMedianSortedArrays2(arr1, arr2));
+
+var findMedianSortedArrays3 = function(nums1, nums2) {
+    let concatLength = nums1.length + nums2.length;
+    function findMedian(arr) {
+        const mid = Math.floor(arr.length / 2);
+        return arr.length % 2 !== 0 ? arr[mid] : (arr[mid - 1] + arr[mid]) / 2;
+    }
+    let pointer1 = 0;
+    let pointer2 = 0;
+    let concatArr = new Array(concatLength);
+    for(let i = 0; i < concatLength; i++) {
+        if(nums1[pointer1] <= nums2[pointer2]) {
+            concatArr[i] = nums1[pointer1++];
+        } else {
+            concatArr[i] = nums2[pointer2++];
+        }
+    }
+    return findMedian(concatArr);
+}
+
+console.log("3",findMedianSortedArrays3(arr1, arr2));

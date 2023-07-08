@@ -1,0 +1,6 @@
+First approach.
+Use [... ], to join arrays and then sort function to sort them.
+Check if length is odd or even. Calculate median member.
+
+Second approach
+Create a function to find median. Join two sorted arrays using 2 pointers. When adding to new array add smaller number and increase its pointer. WHen done, return median of new array.
