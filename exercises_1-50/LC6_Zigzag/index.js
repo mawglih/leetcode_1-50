@@ -4,11 +4,7 @@
 P   A   H   N
 A P L S I I G
 Y   I   R
-And then read line by line: "PAHNAPLSIIGYIR"
-
-Write the code that will take a string and make this conversion given a number of rows:
-
-string convert(string s, int numRows);
+And then read line by line: "PAHNAPLSIIGYIR". Write the code that will take a string and make this conversion given a number of rows: string convert(string s, int numRows);
  */
 
 /**
@@ -21,10 +17,9 @@ var convert = function(s, numRows) {
     let down = true;
     let curr = 1;
     let arr = new Array();
-    for(let i = 0; i < numRows; i++) { //create 2-dim array
+    for(let i = 0; i < numRows; i++) {
         arr[i] = new Array();
     }
-    //fill array
     for(let i = 0; i < s.length; i++) {
         arr[curr - 1].push(s[i]);
         if(down) {
@@ -41,7 +36,7 @@ var convert = function(s, numRows) {
             }
         }
     }
-    let out = ''; // concatenate string
+    let out = '';
     for (let i = 0; i < numRows; i++) {
         out += arr[i].join('');
     }
