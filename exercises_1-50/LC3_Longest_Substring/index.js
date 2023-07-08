@@ -11,21 +11,19 @@ var lengthOfLongestSubstring = function(s) {
     let longest = 0;
     let startIndex = 0;
     for(let i = 0; i < s.length; i++) {
-        console.log('element in hashmap', hashMap.get(s[i]));
         if(hashMap.get(s[i]) >= startIndex) {
-            startIndex = hashMap.get(s[i]) + 1;
-            console.log('startIndex', startIndex);
+            // startIndex = hashMap.get(s[i]) + 1;
+            startIndex = i + 1;
         } 
         hashMap.set(s[i], i);
-        console.log('hashMap', hashMap);
         longest = Math.max(longest, i - startIndex + 1);
-        console.log('longest', longest);
     }
     return longest;
 };
 
 
-const str = 'abcabcbb'
+
+const str = 'abcdabcbbacse'
 console.log(lengthOfLongestSubstring(str));
 
 // runtime 80 ms

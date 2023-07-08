@@ -5,4 +5,14 @@ const convertListToArray = listNode => {
     };
     arr.push(listNode.val);
     return arr;
+}
+
+const convertListToArray2 = head => {
+  let arr = [];
+  let index = 0;
+  while(head != null) {
+    arr[index++] = head.val;
+    head = head.next;
   }
+  return arr;
+}

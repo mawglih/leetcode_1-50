@@ -1,0 +1,5 @@
+1. Create a function to convert linked list to array.
+2. Convert both lists and save them in temp vars.
+3. Convert into strings, then in BigInt and sum them, then convert to string and back to array
+4. Create a function to convert array to linked list.
+5. Return new linked list.
