@@ -1,0 +1,1 @@
+Create a hasmap of roman numbers as keys and decimal numbers as values. Run a for loop from index 0 of the string. Compare current and next digit. If next digit (from hashmap value) is bigger - deduct it from total, if it is les s or equal - add to total.
