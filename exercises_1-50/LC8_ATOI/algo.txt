@@ -1,0 +1,1 @@
+Create a regex to filter out sign and digits. ^([\s]+) any white space as many times it is found in the beginning if it is followed by any sign +- and folowed by digit. When matched check if it less that min or greater then max and return either number or 0.
