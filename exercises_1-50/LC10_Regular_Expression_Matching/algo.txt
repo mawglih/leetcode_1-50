@@ -1,0 +1,5 @@
+Set edge cases. 
+Create a helper function that checks the match of the first char. Call it recursively. 
+If length of first string greater than 0 and first char of p is equal '.' or equal first char of s.
+if not: if second char of p is '*', then call isMatch again but slice p from second char, however check is firstchamatch is true and slice of s from index 1 and p matches.
+Return true or false if isMatch(s.slice(1), p.slice(1)) is ture or false if first char is matched.
