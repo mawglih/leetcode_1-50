@@ -1,0 +1,1 @@
+if no strings in array then return empty string. Now compare all strings with the first one using for loop to go char by char. Use some to check all array members. As soon as the first diferent char found, return slice of the first word starting from 0 to i (non inclusive).
