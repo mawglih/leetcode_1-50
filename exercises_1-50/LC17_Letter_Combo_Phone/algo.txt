@@ -1,0 +1,2 @@
+1st solution. Create a hashmap of possible digits (key) to letters (array of values) mappings. First map to result all letters of first digit. In the for loop starting from 1 (second digit) map each letter to each letter of digit values in hashmap by concatenating it with entry in results. After for loop finishes return result. Array needs to be flatten or use flatMap.
+2nd solution. Beginning the same, but instead of mapping twice use 2 for loops.
