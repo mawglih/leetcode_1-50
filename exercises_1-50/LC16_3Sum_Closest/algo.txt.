@@ -1,0 +1,1 @@
+Similar to previous one 3Sum, but add closest before moving cursors left and right closest = Math.abs(target - closest) < Math.abs(target - curSum) ? closest : curSum; If target found - return it, otherwise return closest.
